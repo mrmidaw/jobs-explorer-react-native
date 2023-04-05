@@ -2,6 +2,8 @@
 
 ## Environment Variables
 
-To run this project, you will need to add the following environment variables to your .env file
+Для локального запуска проекта вам нужно создать в корне проекта .env
+ключ для api вы можете получить
 
-`API_KEY`
+- [Rapid API - JSearch](https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch)
+  `RAPID_API_KEY`
