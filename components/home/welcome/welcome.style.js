@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
   },
   tabsContainer: {
     width: "100%",
+    direction: "row",
     marginTop: SIZES.medium,
   },
   tab: (activeJobType, item) => ({
