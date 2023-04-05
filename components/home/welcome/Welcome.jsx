@@ -25,7 +25,9 @@ const Welcome = () => {
     <View>
       <View style={styles.container}>
         <Text style={styles.userName}>Привет Пользователь</Text>
-        <Text style={styles.welcomeMessage}>Найди свою идеальную Вакансию</Text>
+        <Text style={styles.welcomeMessage}>
+          Найди своего идеального кандидата
+        </Text>
       </View>
 
       <View style={styles.searchContainer}>
