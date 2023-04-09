@@ -4,6 +4,8 @@
 
 ##### Для локального запуска проекта вам нужно создать в корне проекта .env
 
+##### Вам нужно создать переменную RAPID_API_KEY=
+
 ##### Ключ для api вы можете получить
 
 - [Rapid API - JSearch](https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch)

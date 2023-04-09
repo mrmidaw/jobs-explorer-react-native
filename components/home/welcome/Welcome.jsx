@@ -1,6 +1,5 @@
 import { useState } from "react";
 import {
-  ScrollView,
   View,
   Text,
   TextInput,
@@ -8,25 +7,23 @@ import {
   Image,
   FlatList,
 } from "react-native";
-
 import { useRouter } from "expo-router";
 
 import styles from "./welcome.style";
 import { icons, SIZES } from "../../../constants";
 
-const jobsTypes = ["Full-Time", "Part-Time", "Contractor"];
+const jobTypes = ["Full-time", "Part-time", "Contractor"];
 
-const Welcome = () => {
+const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
   const router = useRouter();
-
-  const [activeJobType, setActiveJobType] = useState("Full-Time");
+  const [activeJobType, setActiveJobType] = useState("Full-time");
 
   return (
     <View>
       <View style={styles.container}>
-        <Text style={styles.userName}>Привет Пользователь</Text>
+        <Text style={styles.userName}>Привет пользователь</Text>
         <Text style={styles.welcomeMessage}>
-          Найди своего идеального кандидата
+          Найди своего идального кандидата
         </Text>
       </View>
 
@@ -34,13 +31,13 @@ const Welcome = () => {
         <View style={styles.searchWrapper}>
           <TextInput
             style={styles.searchInput}
-            value=""
-            onChange={() => {}}
-            placeholder="Введите профессию"
+            value={searchTerm}
+            onChangeText={(text) => setSearchTerm(text)}
+            placeholder="Введите текст?"
           />
         </View>
 
-        <TouchableOpacity style={styles.searchBtn} onPress={() => {}}>
+        <TouchableOpacity style={styles.searchBtn} onPress={handleClick}>
           <Image
             source={icons.search}
             resizeMode="contain"
@@ -51,7 +48,7 @@ const Welcome = () => {
 
       <View style={styles.tabsContainer}>
         <FlatList
-          data={jobsTypes}
+          data={jobTypes}
           renderItem={({ item }) => (
             <TouchableOpacity
               style={styles.tab(activeJobType, item)}
